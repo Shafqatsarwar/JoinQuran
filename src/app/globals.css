@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --background-color: #1e293b; /* Dark navy */
+  --primary-color: #0f766e; /* Teal 700 */
+  --secondary-color: #0ea5e9; /* Sky 500 */
+  --accent-color: #f97316; /* Orange 500 */
+  --text-color: #ffffff; /* White */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
