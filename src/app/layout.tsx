@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ChatButton from "@/components/ChatButton";
 import Footer from "@/components/Footer";
+import { PWAProvider } from "@/context/PWAContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "JoinQuran - Learn Quran Online",
   description: "Learn to read Quran online with our qualified tutors. We offer a variety of courses for all ages and levels.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -30,26 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <link rel="manifest" href="/manifest.json" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                  }, function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                  });
-                });
-              }
-            `,
-          }}
-        />
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <ChatButton />
-        <Footer />
+        <PWAProvider>
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <ChatButton />
+          <Footer />
+        </PWAProvider>
       </body>
     </html>
   );

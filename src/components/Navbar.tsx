@@ -2,9 +2,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePWA } from '@/context/PWAContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { handleInstallClick } = usePWA();
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -26,16 +28,39 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-6">
+            {/* Install App Button (Left of Home) */}
+            <button
+              onClick={handleInstallClick}
+              className="flex items-center space-x-1 text-teal-400 hover:text-teal-300 transition-all px-3 py-1.5 rounded-full border border-teal-400/30 hover:border-teal-400/60 hover:bg-teal-400/10 text-xs font-bold backdrop-blur-sm"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              <span>Install App</span>
+            </button>
+
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="text-white hover:text-gray-300 transition-colors text-sm font-medium">
                 {link.label}
               </Link>
             ))}
+
             <Link href="/login" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition-all">
               Login
             </Link>
           </div>
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center space-x-4">
+            {/* Install Button (Mobile Header) */}
+            <button
+              onClick={handleInstallClick}
+              className="flex items-center space-x-1 text-teal-400 hover:text-teal-300 transition-all px-3 py-1.5 rounded-full border border-teal-400/30 hover:border-teal-400/60 hover:bg-teal-400/10 text-xs font-bold backdrop-blur-sm"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              <span>Install</span>
+            </button>
+
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
               {/* Hamburger Icon */}
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

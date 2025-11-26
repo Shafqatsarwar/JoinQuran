@@ -1,23 +1,26 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ReactNode } from 'react';
+import { usePWA } from '@/context/PWAContext';
 
 const Footer = () => {
+  const { handleInstallClick } = usePWA();
+
   const footerLinks = {
     'ABOUT': [
       { href: '/about', label: 'About Us' },
       { href: '/our-mission', label: 'Our Mission' },
-      { href: '/how-we-teach', label: 'How We Teach' },
+      // 'How we teach' removed as requested
     ],
     'COURSES': [
       { href: '/courses', label: 'All Courses' },
       { href: '/fees', label: 'Fees', isFees: true },
-      { href: '/start-learning', label: 'Start Learning' },
+      { href: '/prayer-times', label: 'Prayer Times' },
     ],
     'SUPPORT': [
       { href: '/faq', label: 'FAQ' },
       { href: '/reviews', label: 'Reviews' },
-      { href: '/prayer-times', label: 'Prayer Times' },
     ],
   };
 
@@ -110,11 +113,25 @@ const Footer = () => {
                       )}
                     </li>
                   ))}
+                  {/* Add Install Button under ABOUT */}
+                  {title === 'ABOUT' && (
+                    <li className="mt-2">
+                      <button
+                        onClick={handleInstallClick}
+                        className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-xs font-medium space-x-1"
+                      >
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        <span>Install App</span>
+                      </button>
+                    </li>
+                  )}
                   {/* Add Contact Us Button under Support */}
                   {title === 'SUPPORT' && (
                     <li className="mt-3">
-                      <Link href="/contact" className="inline-flex items-center bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full transition-all text-xs space-x-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <Link href="/contact" className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors text-xs font-medium space-x-1">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <span>Contact Us</span>
