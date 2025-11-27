@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 
-const MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"];
+const MODELS = ["gemini-2.5-flash", "gemini-2.5-pro"];
 
 const SYSTEM_INSTRUCTION = `
 You are a concise, polite AI assistant for JoinQuran.
@@ -19,7 +19,7 @@ RULES:
   - Starts from **25 minutes** to **30 minutes** per person
 • **Links:** Always provide clear, clickable links:
   - [View Fees](https://first-join-quran.vercel.app/fees)
-  - [Contact Us](https://first-join-quran.vercel.app/contact us)
+  - [Contact Us](https://first-join-quran.vercel.app/contact)
   - [Main Website](https://www.joinquran.com/)
 • **General Information:** Always provide clear, short answers:
   - Web Search for universal information
@@ -30,7 +30,6 @@ If unsure, send user to Contact Us.
 End with:
 "Send us your query in the [Contact Us](https://first-join-quran.vercel.app/contact) section — we will get back to you soon, in shā’ Allāh."
 `;
-
 
 export async function POST(req: Request) {
     try {
@@ -53,7 +52,6 @@ export async function POST(req: Request) {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey);
-
         let lastError: unknown = null;
 
         // Try models one by one (2.5 -> 1.5 fallback)

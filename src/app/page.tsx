@@ -8,28 +8,28 @@ export default function Home() {
         TODO: Replace # with a real image path in public folder. e.g. /islamic-background.jpg
       */}
       <section
-        className="relative bg-[#1e293b] text-white bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: "url('/islamic-pattern-bg.jpg')" }} // Placeholder, but we'll add a gradient overlay
+        className="relative bg-dark-bg text-white bg-cover bg-center overflow-hidden"
+        style={{ backgroundImage: "url('/islamic-pattern-bg.jpg')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1e293b]/95 via-[#334155]/90 to-[#1e293b]/95 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-bg/95 via-dark-surface/90 to-dark-bg/95 mix-blend-multiply"></div>
         <div className="relative container mx-auto px-4 py-32 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-md tracking-tight">
-            Learn Quran Online <br /> with <span className="text-orange-500">Qualified Tutors</span> 🌙
+            Learn Quran Online <br /> with <span className="text-golden">Qualified Tutors</span> 🌙
           </h1>
-          <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light text-gray-100">
+          <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light text-text-secondary">
             Join our online Quran classes and learn from the comfort of your home.
           </p>
-          <Link href="/start-learning" className="bg-orange-500 text-white font-bold py-4 px-10 rounded-full shadow-xl hover:bg-orange-600 hover:shadow-2xl transition-all transform hover:scale-105 inline-block border-2 border-transparent hover:border-white/20">
+          <Link href="/contact" className="bg-golden text-white font-bold py-4 px-10 rounded-full shadow-xl hover:bg-golden-dark hover:shadow-2xl hover:shadow-golden/50 transition-all transform hover:scale-105 inline-block border-2 border-transparent hover:border-white/20">
             Start Your Free Trial
           </Link>
         </div>
       </section>
 
       {/* Our Mission Section */}
-      <section className="py-16 bg-[#1e293b] text-white">
+      <section className="py-16 bg-dark-bg text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-white mb-8">Our Mission</h2>
-          <div className="prose lg:prose-xl mx-auto text-gray-200 max-w-4xl">
+          <div className="prose lg:prose-xl mx-auto text-text-secondary max-w-4xl">
             <p className="leading-relaxed mb-4">
               Tajweed means to pronounce or recite every letter correctly, i.e. from its proper origin of pronunciation coupled with its stipulated attributes such as prolongation (Madd), merging (Idgham), conversion (Iqlab), and pauses (Waqaf) etc. Tajweed and its application can only be learned with a qualified Quran teacher. The rules themselves can be studied independently, but the correct application and proper pronunciation of the alphabets of Quran can only be done by reading to, listening to, reciting to, and being corrected by a qualified teacher of the Quran.
             </p>

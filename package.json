@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@openai/agents": "^0.3.2",
     "bcryptjs": "^3.0.3",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.554.0",
@@ -25,8 +24,8 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/nodemailer": "^7.0.4",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
     "tailwindcss": "^4",

@@ -1,21 +1,60 @@
 {
-    "name": "JoinQuran - Learn Quran Online",
+    "name": "JoinQuran – Learn Quran Online",
     "short_name": "JoinQuran",
-    "description": "Learn to read Quran online with our qualified tutors.",
-    "start_url": "/",
+    "id": "/",
+    "description": "Learn to read the Quran online with qualified tutors through interactive lessons and flexible scheduling.",
+    "start_url": "/?source=pwa",
+    "scope": "/",
     "display": "standalone",
+    "display_override": [
+        "window-controls-overlay",
+        "standalone",
+        "minimal-ui"
+    ],
     "background_color": "#1e293b",
     "theme_color": "#1e293b",
+    "orientation": "portrait",
     "icons": [
         {
-            "src": "/logo_JoinQuran.jpg",
-            "sizes": "192x192",
-            "type": "image/jpeg"
+            "src": "/logo_JoinQuran.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
-            "src": "/logo_JoinQuran.jpg",
+            "src": "/logo_JoinQuran.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512.png",
             "sizes": "512x512",
-            "type": "image/jpeg"
+            "type": "image/png"
         }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshots/home-mobile.png",
+            "sizes": "1080x1920",
+            "type": "image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "/screenshots/home-desktop.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ],
+    "categories": [
+        "education",
+        "books",
+        "learning"
     ]
 }

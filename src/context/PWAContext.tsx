@@ -1,66 +1,46 @@
 'use client';
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
-interface PWAContextType {
-    deferredPrompt: any;
-    handleInstallClick: () => void;
-    isInstallable: boolean;
-}
+type PWAContextType = {
+    handleInstallClick: () => Promise<void>;
+};
 
-const PWAContext = createContext<PWAContextType | undefined>(undefined);
+const PWAContext = createContext<PWAContextType>({
+    handleInstallClick: async () => { },
+});
 
 export const PWAProvider = ({ children }: { children: ReactNode }) => {
     const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
-    const [isInstallable, setIsInstallable] = useState(false);
 
     useEffect(() => {
-        // Register Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/sw.js').then(function (registration) {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function (err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-
-        const handler = (e: any) => {
+        const handler = (e: Event) => {
             e.preventDefault();
             setDeferredPrompt(e);
-            setIsInstallable(true);
         };
-        window.addEventListener('beforeinstallprompt', handler);
-        return () => window.removeEventListener('beforeinstallprompt', handler);
+
+        window.addEventListener('beforeinstallprompt', handler as any);
+
+        return () => {
+            window.removeEventListener('beforeinstallprompt', handler as any);
+        };
     }, []);
 
     const handleInstallClick = async () => {
-        if (!deferredPrompt) {
-            // If no prompt is available (already installed or not supported), 
-            // we can't force it, but we can log or show a tooltip.
-            // For now, we'll just return.
-            console.log('Install prompt not available');
-            return;
-        }
+        if (!deferredPrompt) return;
+
         deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        if (outcome === 'accepted') {
-            setDeferredPrompt(null);
-            setIsInstallable(false);
-        }
+        const choice = await deferredPrompt.userChoice;
+        console.log('PWA Install choice:', choice.outcome);
+
+        setDeferredPrompt(null);
+        (window as any).deferredPrompt = null; // safety fallback
     };
 
     return (
-        <PWAContext.Provider value={{ deferredPrompt, handleInstallClick, isInstallable }}>
+        <PWAContext.Provider value={{ handleInstallClick }}>
             {children}
         </PWAContext.Provider>
     );
 };
 
-export const usePWA = () => {
-    const context = useContext(PWAContext);
-    if (context === undefined) {
-        throw new Error('usePWA must be used within a PWAProvider');
-    }
-    return context;
-};
+export const usePWA = () => useContext(PWAContext);

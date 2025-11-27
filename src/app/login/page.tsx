@@ -146,7 +146,7 @@ export default function CustomerLogin() {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#1e293b] via-[#334155] to-[#1e293b] flex items-center justify-center px-4 py-8">
+        <div className="min-h-screen bg-gradient-to-br from-dark-bg via-dark-surface to-dark-bg flex items-center justify-center px-4 py-8">
             <div className="max-w-2xl w-full">
                 {/* Logo and Title */}
                 <div className="text-center mb-8">
@@ -176,7 +176,7 @@ export default function CustomerLogin() {
                                 setSuccess('');
                             }}
                             className={`flex-1 py-4 px-6 text-center font-semibold transition-all ${activeTab === 'signin'
-                                ? 'text-teal-600 border-b-2 border-teal-600 bg-teal-50'
+                                ? 'text-emerald-primary border-b-2 border-emerald-primary bg-emerald-primary/10'
                                 : 'text-gray-500 hover:text-gray-700'
                                 }`}
                         >
@@ -190,7 +190,7 @@ export default function CustomerLogin() {
                                 setSuccess('');
                             }}
                             className={`flex-1 py-4 px-6 text-center font-semibold transition-all ${activeTab === 'signup'
-                                ? 'text-teal-600 border-b-2 border-teal-600 bg-teal-50'
+                                ? 'text-emerald-primary border-b-2 border-emerald-primary bg-emerald-primary/10'
                                 : 'text-gray-500 hover:text-gray-700'
                                 }`}
                         >
@@ -221,7 +221,7 @@ export default function CustomerLogin() {
                                         required
                                         value={signInData.email}
                                         onChange={(e) => setSignInData({ ...signInData, email: e.target.value })}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                         placeholder="your@email.com"
                                         disabled={isLoading}
                                     />
@@ -233,7 +233,7 @@ export default function CustomerLogin() {
                                         required
                                         value={signInData.password}
                                         onChange={(e) => setSignInData({ ...signInData, password: e.target.value })}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                         placeholder="Enter your password"
                                         disabled={isLoading}
                                     />
@@ -241,7 +241,7 @@ export default function CustomerLogin() {
                                 <button
                                     type="submit"
                                     disabled={isLoading}
-                                    className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
+                                    className="w-full bg-gradient-to-r from-emerald-primary to-emerald-dark hover:from-emerald-dark hover:to-emerald-darker text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
                                 >
                                     {isLoading ? 'Signing in...' : 'Sign In'}
                                 </button>
@@ -264,7 +264,7 @@ export default function CustomerLogin() {
                                             required
                                             value={signUpData.studentName}
                                             onChange={(e) => setSignUpData({ ...signUpData, studentName: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             placeholder="Student's full name"
                                         />
                                     </div>
@@ -275,7 +275,7 @@ export default function CustomerLogin() {
                                             required
                                             value={signUpData.guardianName}
                                             onChange={(e) => setSignUpData({ ...signUpData, guardianName: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             placeholder="Parent/Guardian name"
                                         />
                                     </div>
@@ -288,7 +288,7 @@ export default function CustomerLogin() {
                                         required
                                         value={signUpData.email}
                                         onChange={(e) => setSignUpData({ ...signUpData, email: e.target.value })}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                         placeholder="your@email.com"
                                     />
                                 </div>
@@ -301,7 +301,7 @@ export default function CustomerLogin() {
                                             required
                                             value={signUpData.mobile}
                                             onChange={(e) => setSignUpData({ ...signUpData, mobile: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             placeholder="+1234567890"
                                         />
                                     </div>
@@ -312,7 +312,7 @@ export default function CustomerLogin() {
                                             required
                                             value={signUpData.city}
                                             onChange={(e) => setSignUpData({ ...signUpData, city: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             placeholder="Your city"
                                         />
                                     </div>
@@ -326,7 +326,7 @@ export default function CustomerLogin() {
                                             required
                                             value={signUpData.country}
                                             onChange={(e) => setSignUpData({ ...signUpData, country: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             placeholder="Your country"
                                         />
                                     </div>
@@ -336,7 +336,7 @@ export default function CustomerLogin() {
                                             required
                                             value={signUpData.gender}
                                             onChange={(e) => setSignUpData({ ...signUpData, gender: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                         >
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -353,7 +353,7 @@ export default function CustomerLogin() {
                                         max="100"
                                         value={signUpData.studentAge}
                                         onChange={(e) => setSignUpData({ ...signUpData, studentAge: e.target.value })}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                         placeholder="Age"
                                     />
                                 </div>
@@ -367,7 +367,7 @@ export default function CustomerLogin() {
                                             minLength={6}
                                             value={signUpData.password}
                                             onChange={(e) => setSignUpData({ ...signUpData, password: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             placeholder="Min. 6 characters"
                                         />
                                     </div>
@@ -379,7 +379,7 @@ export default function CustomerLogin() {
                                             minLength={6}
                                             value={signUpData.confirmPassword}
                                             onChange={(e) => setSignUpData({ ...signUpData, confirmPassword: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             placeholder="Confirm password"
                                         />
                                     </div>
@@ -387,7 +387,7 @@ export default function CustomerLogin() {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                                    className="w-full bg-gradient-to-r from-golden to-golden-dark hover:from-golden-dark hover:to-golden text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg"
                                 >
                                     Next: Learning Preferences →
                                 </button>
@@ -408,7 +408,7 @@ export default function CustomerLogin() {
                                         required
                                         value={learningPreferences.level}
                                         onChange={(e) => setLearningPreferences({ ...learningPreferences, level: e.target.value })}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                         disabled={isLoading}
                                     >
                                         <option value="Beginner">Beginner (Just starting)</option>
@@ -423,7 +423,7 @@ export default function CustomerLogin() {
                                         required
                                         value={learningPreferences.daysPerWeek}
                                         onChange={(e) => setLearningPreferences({ ...learningPreferences, daysPerWeek: Number(e.target.value) })}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                         disabled={isLoading}
                                     >
                                         <option value={3}>3 Days per Week</option>
@@ -440,7 +440,7 @@ export default function CustomerLogin() {
                                             required
                                             value={learningPreferences.preferredTime}
                                             onChange={(e) => setLearningPreferences({ ...learningPreferences, preferredTime: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             disabled={isLoading}
                                         />
                                     </div>
@@ -450,7 +450,7 @@ export default function CustomerLogin() {
                                             required
                                             value={learningPreferences.timezone}
                                             onChange={(e) => setLearningPreferences({ ...learningPreferences, timezone: e.target.value })}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                                             disabled={isLoading}
                                         >
                                             {timezones.map((tz) => (
@@ -472,7 +472,7 @@ export default function CustomerLogin() {
                                     <button
                                         type="submit"
                                         disabled={isLoading}
-                                        className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
+                                        className="flex-1 bg-gradient-to-r from-golden to-golden-dark hover:from-golden-dark hover:to-golden text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
                                     >
                                         {isLoading ? 'Creating Account...' : 'Complete Registration'}
                                     </button>
