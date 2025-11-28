@@ -143,7 +143,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-xs text-gray-600 hover:text-golden transition-colors flex items-center gap-1.5"
+                    className="text-xs text-white hover:text-golden transition-colors flex items-center gap-1.5"
                   >
                     <span className="w-1 h-1 rounded-full bg-emerald-primary/50"></span>
                     {link.label}

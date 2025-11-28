@@ -15,7 +15,7 @@ const Navbar = () => {
     { href: '/courses', label: 'Courses' },
     { href: '/how-we-teach', label: 'How we Teach' },
     { href: '/prayer-times', label: 'Prayer Times' },
-    { href: '/start-learning', label: 'Start Learning' },
+    { href: '/fees', label: 'Fees' },
   ];
 
   return (
