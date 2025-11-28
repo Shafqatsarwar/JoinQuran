@@ -66,7 +66,7 @@ const ReviewsPage = () => {
   return (
     <div className="container mx-auto px-4 py-16 text-gray-800">
       <h1 className="text-4xl font-bold text-center text-yellow-400 mb-4">Student Reviews ⭐</h1>
-      <p className="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+      <p className="text-center text-text-muted mb-12 max-w-2xl mx-auto">
         See what our students and parents have to say about their learning journey with JoinQuran.
       </p>
 
@@ -76,17 +76,17 @@ const ReviewsPage = () => {
       <div className="my-16 border-t border-gray-300"></div>
 
       {/* Review Form */}
-      <div className="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12 border border-gray-100">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-700">Write a Review</h2>
+      <div className="max-w-2xl mx-auto bg-dark-surface p-6 rounded-xl shadow-md mb-12 border border-gray-700">
+        <h2 className="text-2xl font-semibold mb-4 text-white">Write a Review</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-600 mb-1">Your Name</label>
+            <label className="block text-sm font-medium text-text-secondary mb-1">Your Name</label>
             <input
               type="text"
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all placeholder-gray-500 text-gray-700"
+              className="w-full px-4 py-2 border border-gray-600 bg-dark-bg rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all placeholder-gray-500 text-white"
               placeholder="John Doe"
             />
           </div>
@@ -111,7 +111,7 @@ const ReviewsPage = () => {
               required
               value={formData.comment}
               onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all h-32 placeholder-gray-500 text-gray-700"
+              className="w-full px-4 py-2 border border-gray-600 bg-dark-bg rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all h-32 placeholder-gray-500 text-white"
               placeholder="Share your experience..."
             />
           </div>
@@ -136,13 +136,13 @@ const ReviewsPage = () => {
           <p className="text-center col-span-2 text-gray-400">No reviews yet. Be the first to write one!</p>
         ) : (
           reviews.map((review) => (
-            <div key={review.id} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div key={review.id} className="bg-dark-surface p-6 rounded-xl shadow-sm border border-gray-700 hover:shadow-md transition-shadow">
               <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-lg text-gray-700">{review.name}</h3>
+                <h3 className="font-bold text-lg text-white">{review.name}</h3>
                 <span className="text-yellow-400 text-lg">{'★'.repeat(review.rating)}<span className="text-gray-300">{'★'.repeat(5 - review.rating)}</span></span>
               </div>
-              <p className="text-gray-600 leading-relaxed">{review.comment}</p>
-              <p className="text-xs text-gray-400 mt-4">{new Date(review.date).toLocaleDateString()}</p>
+              <p className="text-text-secondary leading-relaxed">{review.comment}</p>
+              <p className="text-xs text-text-muted mt-4">{new Date(review.date).toLocaleDateString()}</p>
             </div>
           ))
         )}

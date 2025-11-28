@@ -4,7 +4,7 @@ const CoursesPage = () => {
       <h1 className="text-4xl font-bold text-center text-yellow-500 mb-8">Our Courses 📚</h1>
       <div className="grid md:grid-cols-2 gap-8">
         {/* Course 1 */}
-        <div className="p-6 rounded-lg shadow-lg bg-white">
+        <div className="p-6 rounded-lg shadow-lg bg-white border border-gray-100">
           <h2 className="text-3xl font-bold text-yellow-500 mb-4">Nazra-e-Quran / Hifz-e-Quran</h2>
           <p className="mb-4 text-gray-700">
             Nazra is to read the Holy Quran verbally, without translation and memorization and Hifz is the memorization of the Holy Quran by heart. Hifz course is particularly designed for those who has already taken Nazra-e-Quran, but you may took this course depending upon the student’s capability.
@@ -20,7 +20,7 @@ const CoursesPage = () => {
         </div>
 
         {/* Course 2 */}
-        <div className="p-6 rounded-lg shadow-lg bg-white">
+        <div className="p-6 rounded-lg shadow-lg bg-white border border-gray-100">
           <h2 className="text-3xl font-bold text-yellow-500 mb-4">Translation of Holy Quran</h2>
           <p className="mb-4 text-gray-700">
             It is to read the Holy Quran through meanings and word to word translation into English and Urdu.

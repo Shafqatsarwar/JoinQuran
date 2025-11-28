@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
         const smtpPort = parseInt(process.env.SMTP_PORT || '587');
         const smtpUser = process.env.SMTP_USER;
         const smtpPassword = process.env.SMTP_PASSWORD;
-        const emailFrom = process.env.EMAIL_FROM || process.env.NEXT_PUBLIC_EMAIL || 'onlinequran50@gmail.com';
+        const emailFrom = 'onlinequran50@gmail.com'; // Always use this as sender
 
         // Check if SMTP credentials are configured
         if (!smtpUser || !smtpPassword) {

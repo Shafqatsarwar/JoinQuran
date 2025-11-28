@@ -2,14 +2,14 @@ const FeesPage = () => {
   return (
     <div className="container mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-center text-yellow-400 mb-8">Our Fees 💰</h1>
-      <div className="prose lg:prose-xl mx-auto text-center text-gray-700">
+      <div className="prose lg:prose-xl mx-auto text-center text-text-secondary">
         <p>
           We are proud that since our start we have not accepted any single dollar donation from any organization or person. We are running institution on small monthly fees that we receive from students.
         </p>
       </div>
 
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 mt-8">
-        <div className="bg-white p-6 rounded-lg shadow-lg text-gray-700">
+        <div className="bg-dark-surface p-6 rounded-lg shadow-lg border border-gray-700 text-text-secondary">
           <h2 className="text-2xl font-bold text-yellow-400 mb-4">Monthly Fee</h2>
           <p>This package is for a single student.</p>
           <ul className="list-none space-y-2 mt-4">
@@ -33,7 +33,7 @@ const FeesPage = () => {
         </div>
       </div>
 
-      <div className="text-center mt-8 text-gray-700">
+      <div className="text-center mt-8 text-text-secondary">
         <p>Students other than USA & UK can use Google currency converter to see the fee in their local currency.</p>
         <a
           href="https://www.google.com/search?q=currency+converter"
@@ -48,7 +48,7 @@ const FeesPage = () => {
       <div className="text-center mt-8">
         <a
           href="/start-learning"
-          className="bg-gray-700 text-yellow-400 px-6 py-3 rounded-md shadow-md hover:bg-gray-600 transition-colors"
+          className="bg-gray-700 text-white px-6 py-3 rounded-md shadow-md hover:bg-gray-600 transition-colors"
         >
           To Start Free Trial Sign Up Now
         </a>

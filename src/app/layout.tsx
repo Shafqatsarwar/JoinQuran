@@ -74,8 +74,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" as="image" href="/logo_JoinQuran.jpg" />
       </head>
 
-      {/* Refined colors: white background for better contrast */}
-      <body className="flex flex-col min-h-screen bg-white text-gray-900 selection:bg-golden selection:text-white">
+      {/* Dark theme with navy background for proper contrast */}
+      <body className="flex flex-col min-h-screen bg-dark-bg text-white selection:bg-golden selection:text-white">
         <PWAProvider>
           {/* NAVBAR */}
           <Navbar />

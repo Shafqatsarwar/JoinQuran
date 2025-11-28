@@ -64,16 +64,16 @@ const ContactPage = () => {
         </p>
       </div>
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 mt-8">
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
+        <div className="bg-dark-surface p-6 rounded-lg shadow-lg border border-gray-700">
           <h2 className="text-2xl font-bold text-golden mb-4">Contact Information</h2>
-          <div className="space-y-4 text-gray-700">
+          <div className="space-y-4 text-text-secondary">
             <p><strong>Whatsapp:</strong> {process.env.NEXT_PUBLIC_WHATSAPP}</p>
             <p><strong>Phone Number UK:</strong> {process.env.NEXT_PUBLIC_PHONE_UK}</p>
             <p><strong>Phone Number Pakistan:</strong> {process.env.NEXT_PUBLIC_PHONE_PK}</p>
             <p><strong>Email:</strong> {process.env.NEXT_PUBLIC_EMAIL}</p>
           </div>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
+        <div className="bg-dark-surface p-6 rounded-lg shadow-lg border border-gray-700">
           <h2 className="text-2xl font-bold text-golden mb-4">Send us a Message</h2>
           {submitted ? (
             <div className="text-center py-12">
@@ -95,35 +95,35 @@ const ContactPage = () => {
                 </div>
               )}
               <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium text-text-secondary">Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   required
-                  className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
+                  className="mt-1 block w-full px-3 py-2 bg-dark-bg border border-gray-600 rounded-md shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                   placeholder="John Doe"
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                <label htmlFor="email" className="block text-sm font-medium text-text-secondary">Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   required
-                  className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
+                  className="mt-1 block w-full px-3 py-2 bg-dark-bg border border-gray-600 rounded-md shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                   placeholder="example@email.com"
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium text-text-secondary">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
                   required
-                  className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
+                  className="mt-1 block w-full px-3 py-2 bg-dark-bg border border-gray-600 rounded-md shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                   placeholder="Write your message..."
                 ></textarea>
               </div>

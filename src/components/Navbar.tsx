@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md border-b border-gray-100">
+    <nav className="sticky top-0 z-50 bg-dark-surface shadow-md border-b border-gray-700">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -33,7 +33,7 @@ const Navbar = () => {
                 priority
               />
             </div>
-            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700">
+            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
               JoinQuran
             </span>
           </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-gray-600 hover:text-golden transition-colors duration-200"
+                className="text-sm font-semibold text-text-secondary hover:text-golden transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -82,7 +82,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 hover:text-golden transition-colors p-2"
+            className="md:hidden text-text-secondary hover:text-golden transition-colors p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -119,12 +119,12 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-lg py-4 px-4 flex flex-col space-y-4 animate-in slide-in-from-top-5 duration-200">
+          <div className="md:hidden absolute top-20 left-0 w-full bg-dark-surface border-b border-gray-700 shadow-lg py-4 px-4 flex flex-col space-y-4 animate-in slide-in-from-top-5 duration-200">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-lg font-medium py-2 border-b border-gray-50 text-gray-700 hover:text-golden"
+                className="text-lg font-medium py-2 border-b border-gray-700 text-text-secondary hover:text-golden"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

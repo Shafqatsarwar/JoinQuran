@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 
-const MODELS = ["gemini-2.5-flash", "gemini-2.5-pro"];
+const MODELS = ["gemini-2.5-flash", "gemini-2.5-pro", "gemini-1.5-flash", "gemini-1.5-pro"];
 
 const SYSTEM_INSTRUCTION = `
 You are a concise, polite AI assistant for JoinQuran.

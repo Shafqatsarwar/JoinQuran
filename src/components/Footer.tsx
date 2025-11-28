@@ -80,7 +80,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-white border-t border-gray-100 py-6">
+    <footer className="bg-dark-surface border-t border-gray-700 py-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {/* Brand Section */}
@@ -94,11 +94,11 @@ const Footer = () => {
                   className="object-cover"
                 />
               </div>
-              <span className="text-lg font-bold text-gray-800">
+              <span className="text-lg font-bold text-white">
                 JoinQuran
               </span>
             </Link>
-            <p className="text-xs text-gray-500 leading-relaxed max-w-xs">
+            <p className="text-xs text-text-muted leading-relaxed max-w-xs">
               Learn Quran online with qualified tutors. Flexible timings, one-on-one sessions.
             </p>
             <div className="flex gap-2">
@@ -108,7 +108,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-7 h-7 rounded-full bg-gray-100 text-gray-500 hover:bg-emerald-primary hover:text-white transition text-xs"
+                  className="flex items-center justify-center w-7 h-7 rounded-full bg-gray-700 text-gray-300 hover:bg-emerald-primary hover:text-white transition text-xs"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -125,7 +125,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-xs text-gray-600 hover:text-golden transition-colors flex items-center gap-1.5"
+                    className="text-xs text-text-secondary hover:text-golden transition-colors flex items-center gap-1.5"
                   >
                     <span className="w-1 h-1 rounded-full bg-emerald-primary/50"></span>
                     {link.label}
@@ -180,8 +180,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="pt-4 border-t border-gray-100 text-center">
-          <p className="text-[10px] text-gray-400">
+        <div className="pt-4 border-t border-gray-700 text-center">
+          <p className="text-[10px] text-text-muted">
             © {new Date().getFullYear()} JoinQuran. All rights reserved.
           </p>
         </div>
