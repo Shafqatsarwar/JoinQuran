@@ -46,7 +46,7 @@ const ChatButton = () => {
     } catch (error) {
       console.error(error);
       const errorMessage: Message = {
-        text: 'Sorry, I am having trouble right now. Try again later.',
+        text: 'Sorry, I am having trouble right now. Contact at WhatsApp +46764305834.',
         sender: 'bot',
       };
       setMessages((prev) => [...prev, errorMessage]);

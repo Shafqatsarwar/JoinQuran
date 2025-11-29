@@ -22,8 +22,8 @@ RULES:
   - [Contact Us](https://first-join-quran.vercel.app/contact)
   - [Main Website](https://www.joinquran.com/)
 • **General Information:** Always provide clear, short answers:
-  - Web Search for universal information
-  - Provide clear, concise answers about General knowledge
+  - Web Search always for universal information
+  - Provide clear, concise answers about General knowledge asked by user
 
 If unsure, send user to Contact Us.
 
