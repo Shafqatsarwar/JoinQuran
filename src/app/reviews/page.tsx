@@ -78,7 +78,7 @@ const ReviewsPage = () => {
       {/* Review Form */}
       <div className="max-w-2xl mx-auto bg-dark-surface p-6 rounded-xl shadow-md mb-12 border border-gray-700">
         <h2 className="text-2xl font-semibold mb-4 text-white">Write a Review</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="light-form space-y-4">
           <div>
             <label className="block text-sm font-medium text-text-secondary mb-1">Your Name</label>
             <input
@@ -86,7 +86,7 @@ const ReviewsPage = () => {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-600 bg-dark-bg rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all placeholder-gray-500 text-white"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
               placeholder="John Doe"
             />
           </div>
@@ -111,7 +111,7 @@ const ReviewsPage = () => {
               required
               value={formData.comment}
               onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
-              className="w-full px-4 py-2 border border-gray-600 bg-dark-bg rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all h-32 placeholder-gray-500 text-white"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all h-32"
               placeholder="Share your experience..."
             />
           </div>

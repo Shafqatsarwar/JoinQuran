@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* THEME VARIABLES */
 @theme {
   --color-dark-bg: #1a1f2e;
   --color-dark-surface: #2d3748;
@@ -19,33 +20,64 @@
   --color-dark-text: #1a202c;
 }
 
+/* GLOBAL ROOT COLORS */
 :root {
-  /* Gray-Green-Golden Color Scheme */
   --background-color: #1a1f2e;
-  /* Sophisticated Dark Gray */
   --surface-color: #2d3748;
-  /* Medium Gray for cards/surfaces */
+
   --primary-color: #10b981;
-  /* Emerald Green 500 */
   --primary-dark: #059669;
-  /* Emerald Green 600 */
   --primary-darker: #047857;
-  /* Emerald Green 700 */
+
   --accent-color: #f59e0b;
-  /* Golden Amber 500 */
   --accent-dark: #d97706;
-  /* Golden Amber 600 */
+
   --text-color: #ffffff;
-  /* White - 15.3:1 contrast */
   --text-secondary: #e5e7eb;
-  /* Light Gray - 12.1:1 contrast */
   --text-muted: #9ca3af;
-  /* Medium Gray - 6.2:1 contrast */
 }
 
+/* GLOBAL BASE BODY */
 body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+/* SAFE INPUT OVERRIDES – APPLY TO LIGHT-THEMED FORMS */
+.light-form input,
+.light-form select,
+.light-form textarea {
+  color: #1a202c !important;
+  background-color: #ffffff !important;
+}
+
+.light-form input::placeholder,
+.light-form textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 1;
+}
+
+/* AUTO-FILL FIX */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #1a202c !important;
+}
+
+/* OPTIONAL DARK INPUT THEME */
+.dark-input input,
+.dark-input select,
+.dark-input textarea {
+  background-color: #2d3748 !important;
+  color: #ffffff !important;
+  border-color: #4a5568 !important;
+}
+
+.dark-input input::placeholder,
+.dark-input textarea::placeholder {
+  color: #9ca3af !important;
 }

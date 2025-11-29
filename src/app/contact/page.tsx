@@ -88,7 +88,7 @@ const ContactPage = () => {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="light-form">
               {error && (
                 <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
                   {error}
@@ -101,7 +101,7 @@ const ContactPage = () => {
                   id="name"
                   name="name"
                   required
-                  className="mt-1 block w-full px-3 py-2 bg-dark-bg border border-gray-600 rounded-md shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                   placeholder="John Doe"
                 />
               </div>
@@ -112,7 +112,7 @@ const ContactPage = () => {
                   id="email"
                   name="email"
                   required
-                  className="mt-1 block w-full px-3 py-2 bg-dark-bg border border-gray-600 rounded-md shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                   placeholder="example@email.com"
                 />
               </div>
@@ -123,7 +123,7 @@ const ContactPage = () => {
                   name="message"
                   rows={4}
                   required
-                  className="mt-1 block w-full px-3 py-2 bg-dark-bg border border-gray-600 rounded-md shadow-sm placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-primary focus:border-transparent"
                   placeholder="Write your message..."
                 ></textarea>
               </div>
